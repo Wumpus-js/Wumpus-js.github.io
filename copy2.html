@@ -15,11 +15,10 @@
       copyText.value = text;
       copyText.select();
       copyText.setSelectionRange(0, 99999);
+      document.execCommand("copy");
       }
 
       function function2() {
-      document.execCommand("copy");
-        
       window.close();
       }
       setTimeout(function(){ function2(); }, 5000);
