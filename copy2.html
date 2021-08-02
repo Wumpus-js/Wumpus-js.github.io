@@ -11,6 +11,7 @@
       function function1() {
       const params = new URLSearchParams(document.location.search);
       const text = params.get('text')
+      if(text) {
       var copyText = document.getElementById("myInput");
       copyText.value = text;
       
@@ -20,6 +21,7 @@
       document.execCommand("copy");
         
       window.close();
+      }
       }
     </script>
   </body>
