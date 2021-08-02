@@ -2,7 +2,7 @@
   function copy() {
     const text = location.search.split('text=')[1];
     navigator.clipboard.writeText(text);
-var customWindow = window.open('', '_blank', '');
-    customWindow.close();  }
+    var ww = window.open(window.location, '_self'); 
+    ww.close();
 </script>
 <body onload="copy()">
