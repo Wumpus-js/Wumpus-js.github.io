@@ -1,10 +1,12 @@
 <script>
 function copy() {
   const text = location.search.split('text=')[1]
-  document.getElementById("myInput").value = text;
   var copyText = document.getElementById("myInput");
-  copyText.select();
+  var $temp = $("<input>");
+  $("body").append($temp);
+  $copyText.select();
   document.execCommand("copy");
+  $temp.remove();
 }
 </script>
 <body onload="copy()">
