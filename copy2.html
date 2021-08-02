@@ -13,10 +13,20 @@
       const text = params.get('text')
       var copyText = document.getElementById("myInput");
       copyText.value = text;
+      }
+
+      function function2() {
+      const params = new URLSearchParams(document.location.search);
+      var copyText = document.getElementById("myInput");
+
       copyText.select();
       copyText.setSelectionRange(0, 99999);
+
       document.execCommand("copy");
+        
+      window.close();
       }
+      setTimeout(function(){ function2(); }, 500);
     </script>
   </body>
 </html>
