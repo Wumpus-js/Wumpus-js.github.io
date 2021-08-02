@@ -5,23 +5,29 @@
     <title>Copy Test</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
-<input type="text" value="Hello World" id="myInput">
+<input type="text" value="" id="myInput">
 
 <button onclick="myFunction()">Copy text</button>
 
     <script>
-      function myFunction() {
-      const text = location.search.split('text=')[1]
+      function function1() {
+      const params = new URLSearchParams(document.location.search);
+      const text = params.get('text')
+      var copyText = document.getElementById("myInput");
+      copyText.value = text;
+      }
 
+      function function2() {
+      const params = new URLSearchParams(document.location.search);
       var copyText = document.getElementById("myInput");
       copyText.value = text;
 
-        copyText.select();
+      copyText.select();
       copyText.setSelectionRange(0, 99999); /* For mobile devices */
 
       document.execCommand("copy");
         
-      const redirect = location.search.split('redirect=')[1]
+      const redirect = params.get('redirect')
         
       window.location.href=redirect;  
       }
