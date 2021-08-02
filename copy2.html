@@ -23,13 +23,15 @@
       var copyText = document.getElementById("myInput");
 
       copyText.select();
-      copyText.setSelectionRange(0, 99999); /* For mobile devices */
+      copyText.setSelectionRange(0, 99999);
 
       document.execCommand("copy");
         
-      const redirect = params.get('redirect')
+      window.close();
         
-      window.location.href=redirect;  
+      /*const redirect = params.get('redirect')
+        
+      window.location.href=redirect; */ 
       }
     </script>
   </body>
