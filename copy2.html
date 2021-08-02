@@ -7,9 +7,7 @@
   </head>
   <body onload="copy()">
     <!-- 1. Define some markup -->
-    <input type="button" id="btn" data-clipboard-text="coucou" enabled>
-      <span>Copy</span>
-    </input>
+    <input type="button" id="btn" data-clipboard-text="coucou">Copy</input>
 
     <!-- 2. Include library -->
 <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js"></script>
@@ -19,6 +17,7 @@
       function copy() {
       var btn = document.getElementById('btn');
       var clipboard = new ClipboardJS(btn);
+      btn.disabled = false;
       }
     </script>
   </body>
