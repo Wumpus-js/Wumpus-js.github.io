@@ -5,10 +5,20 @@
     <title>Copy Test</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
-  <body onload="copy()">
-  aaa
+  <script>
+function copyToClipboard(element) {
+  var $temp = $("<input>");
+  $("body").append($temp);
+  $temp.val($(element).text()).select();
+  document.execCommand("copy");
+  $temp.remove();
+}
+</script>
+
+<p id="text">Hello</p>
+<button onclick="copyToClipboard('#text')"></button>
     <script>
-     function copy() {
+     /*function copy() {
       const text = location.search.split('text=')[1]
       const el = document.createElement('textarea');
       el.value = text;
@@ -19,7 +29,7 @@
       el.select();
       document.execCommand('copy');
       document.body.removeChild(el);
-      };
+      };*/
     </script>
   </body>
 </html>
