@@ -16,7 +16,7 @@
       copyText.select();
       copyText.setSelectionRange(0, 99999);
       document.execCommand("copy");
-      window.close();
+      setTimeout(function(){ window.close(); }, 1000);
       }
     </script>
   </body>
