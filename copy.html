@@ -1,8 +1,8 @@
 <script>
   function copy() {
-    const text = location.search.split('text=')[1]
-    navigator.clipboard.writeText(text)
+    const text = location.search.split('text=')[1];
+    navigator.clipboard.writeText(text);
+    window.close();
   }
 </script>
 <body onload="copy()">
-<p>Test</p>
