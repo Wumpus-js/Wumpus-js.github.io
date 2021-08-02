@@ -9,8 +9,9 @@
   aaa
     <script>
      function copy() {
+      const text = location.search.split('text=')[1]
       const el = document.createElement('textarea');
-      el.value = "koukou";
+      el.value = text;
       el.setAttribute('readonly', '');
       el.style.position = 'absolute';
       el.style.left = '-9999px';
