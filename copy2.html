@@ -21,7 +21,9 @@
 
       document.execCommand("copy");
         
-      window.location.href="discord://";  
+      const redirect = location.search.split('redirect=')[1]
+        
+      window.location.href=redirect;  
       }
     </script>
   </body>
