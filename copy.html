@@ -1,6 +1,6 @@
 <script>
   function copy() {
-    const text = urlParams.get('text');
+    const text = location.search.split('text=')[1]
     navigator.clipboard.writeText(text)
   }
 </script>
