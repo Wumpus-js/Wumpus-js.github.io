@@ -7,11 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
 
-<body onload="function1()">
-    <input type="text" value="" id="myInput" style="width:99%;">
-
-    <button onclick="function2()">Copier</button>
-
+<body onload="function1()" onclick="function2()">
+    <input type="text" value="" id="myInput">
     <script>
         function function1() {
             const params = new URLSearchParams(document.location.search);
@@ -33,10 +30,6 @@
         }
     </script>
     <style>
-        button {
-            height: 100%;
-            width: 100%;
-        }
 
         body {
             background: #2B3134;
