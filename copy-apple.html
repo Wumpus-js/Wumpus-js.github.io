@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Copy Test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+ <body onload="function1()">
+<input type="text" value="" id="myInput" style="width:99%;">
+
+<button onclick="function2()">Copier</button>
+
+    <script>
+      function function1() {
+      const params = new URLSearchParams(document.location.search);
+      const text = params.get('text')
+      var copyText = document.getElementById("myInput");
+      copyText.value = text;
+      }
+
+      function function2() {
+      const params = new URLSearchParams(document.location.search);
+      var copyText = document.getElementById("myInput");
+
+      copyText.select();
+      copyText.setSelectionRange(0, 99999);
+
+      document.execCommand("copy");
+        
+      setTimeout( \"refresh()\", 300 );
+      }
+    </script>
+   <style>
+     html, body {
+    height:100%;
+}
+button{
+    height:100%;
+    width:100%;
+}
+   </style>
+  </body>
+</html>
