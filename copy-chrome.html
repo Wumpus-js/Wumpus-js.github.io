@@ -11,11 +11,11 @@
       function function1() {
       const params = new URLSearchParams(document.location.search);
       const text = params.get('text')
-      var copyText = document.getElementById("myInput");
+      /*var copyText = document.getElementById("myInput");
       copyText.value = text;
       copyText.select();
-      copyText.setSelectionRange(0, 99999);
-      document.execCommand("copy");
+      copyText.setSelectionRange(0, 99999);*/
+      navigator.clipboard.writeText(text);
       window.close();
       }
     </script>
