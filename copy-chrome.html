@@ -1,64 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <title>Copy Test</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-  </head>
- <body onload="function1()">
-   <div class="loader loader--style3" title="2">
-  <svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-     width="40px" height="40px" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
-  <path fill="#000" d="M43.935,25.145c0-10.318-8.364-18.683-18.683-18.683c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615c8.072,0,14.615,6.543,14.615,14.615H43.935z">
-    <animateTransform attributeType="xml"
-      attributeName="transform"
-      type="rotate"
-      from="0 25 25"
-      to="360 25 25"
-      dur="0.6s"
-      repeatCount="indefinite"/>
-    </path>
-  </svg>
-</div>
-   <h3>Si vous n'êtes pas automatiquement redirigé vous pouvez quiter la page</h3>
+</head>
+
+<body onload="function1()">
+    <h3>Si vous n'êtes pas automatiquement redirigé vous pouvez quiter la page</h3>
+    <div class="loader loader--style3" title="2">
+        <svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px" y="0px" width="40px" height="40px" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;"
+            xml:space="preserve">
+            <path fill="#000"
+                d="M43.935,25.145c0-10.318-8.364-18.683-18.683-18.683c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615c8.072,0,14.615,6.543,14.615,14.615H43.935z">
+                <animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25"
+                    to="360 25 25" dur="0.6s" repeatCount="indefinite" />
+            </path>
+        </svg>
+    </div>
     <script>
-      function function1() {
-      const params = new URLSearchParams(document.location.search);
-      const text = params.get('text')
-      navigator.clipboard.writeText(text);
-      setTimeout(function(){ window.close(); }, 550);
-      }
+        function function1() {
+            const params = new URLSearchParams(document.location.search);
+            const text = params.get('text')
+            navigator.clipboard.writeText(text);
+            setTimeout(function () { window.close(); }, 550);
+        }
     </script>
-   <style>
-     body{
-  padding: 1em;
-  background: #2B3134;
-  color: #777;
-  text-align: center;
-  font-family: "Gill sans", sans-serif;
-  width: 80%;
-  margin: 0 auto;
-}
-.loader{
-  margin: 0 0 2em;
-  height: 100px;
-  width: 20%;
-  text-align: center;
-  padding: 1em;
-  margin: 0 auto 1em;
-  display: inline-block;
-  vertical-align: top;
-}
-svg path,
-svg rect{
-  fill: #5865F2;
-}
-h3{
-  margin: 1em 0;
-  border-bottom: 1px dashed;
-  padding-bottom: 1em;
-  font-weight: lighter;
-}
-   </style>
-  </body>
+    <style>
+        body {
+            padding: 1em;
+            background: #2B3134;
+            color: #777;
+            text-align: center;
+            font-family: "Gill sans", sans-serif;
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .loader {
+            margin: 0 0 2em;
+            height: 100px;
+            width: 20%;
+            text-align: center;
+            padding: 1em;
+            margin: 0 auto 1em;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        svg path,
+        svg rect {
+            fill: #5865F2;
+        }
+
+        h3 {
+            margin: 1em 0;
+            border-bottom: 1px dashed;
+            padding-bottom: 1em;
+            font-weight: lighter;
+        }
+    </style>
+</body>
+
 </html>
