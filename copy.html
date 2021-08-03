@@ -5,10 +5,10 @@
     <title>Copy Test</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
- <body onload="function1()" style="height:100%;">
+ <body onload="function1()">
 <input type="text" value="" id="myInput" style="width:100%;">
 
-<button onclick="function2()" style="height:100%;width:100%;">Copier</button>
+<button onclick="function2()">Copier</button>
 
     <script>
       function function1() {
@@ -28,11 +28,16 @@
       document.execCommand("copy");
         
       window.close();
-        
-      /*const redirect = params.get('redirect')
-        
-      window.location.href=redirect; */ 
       }
     </script>
+   <style>
+     html, body {
+    height:100%;
+}
+button{
+    height:100%;
+    width:100%;
+}
+   </style>
   </body>
 </html>
